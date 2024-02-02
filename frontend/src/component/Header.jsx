@@ -1,7 +1,7 @@
 import React from "react";
-import "./header.css";
+import "./Header.css";
 
-const Header = () => {
+function Header() {
   return (
     <header className="header">
       <nav className="navigation">
@@ -17,6 +17,6 @@ const Header = () => {
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

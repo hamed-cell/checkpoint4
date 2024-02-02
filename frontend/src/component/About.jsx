@@ -1,6 +1,6 @@
 import "./About.css";
 
-const About = () => {
+function About() {
   return (
     <section className="about-section">
       <h2>À propos de moi</h2>
@@ -12,6 +12,6 @@ const About = () => {
       </p>
     </section>
   );
-};
+}
 
 export default About;

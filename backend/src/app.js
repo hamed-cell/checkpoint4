@@ -2,7 +2,9 @@
 
 require("dotenv").config();
 const express = require("express");
+// eslint-disable-next-line import/no-unresolved
 const mysql = require("mysql");
+// eslint-disable-next-line import/no-unresolved
 const cors = require("cors");
 
 const app = express();
@@ -17,7 +19,8 @@ const db = mysql.createConnection({
 });
 
 app.get("/api/config", (req, res) => {
-  db.query("SELECT cle, valeur FROM CONFIGURATIONS", (err, results) => {
+  // eslint-disable-next-line consistent-return
+  db.query("SELECT cle, valeur FROM CONFIGURATIONS", (err) => {
     if (err) {
       return res.status(500).send("Error retrieving data");
     }
@@ -26,6 +29,7 @@ app.get("/api/config", (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
+// eslint-disable-next-line no-restricted-syntax
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
 // Configure it

@@ -1,4 +1,4 @@
-const Projects = () => {
+function Projects() {
   return (
     <section className="projects-section">
       <h2>Mes Projets</h2>
@@ -8,6 +8,6 @@ const Projects = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Projects;
