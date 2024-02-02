@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #0a192f; /* Navy */
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav-link {
+    color: #64ffda; /* Green */
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.nav-link:hover {
+    color: #ccd6f6; /* Lightest Slate */
+}

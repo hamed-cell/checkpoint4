@@ -1,0 +1,18 @@
+/* src/components/About/About.css */
+.about-section {
+    color: #ccd6f6; /* Lightest Slate */
+    background-color: #112240; /* Light Navy */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.about-section h2 {
+    color: #64ffda; /* Green */
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}

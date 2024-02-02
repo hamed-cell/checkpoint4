@@ -1,8 +1,32 @@
 // Load the express module to create a web application
 
+require("dotenv").config();
 const express = require("express");
+const mysql = require("mysql");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
+app.use(express.json());
+
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+});
+
+app.get("/api/config", (req, res) => {
+  db.query("SELECT cle, valeur FROM CONFIGURATIONS", (err, results) => {
+    if (err) {
+      return res.status(500).send("Error retrieving data");
+    }
+  });
+  // Si il y a d'autres logiques qui devraient retourner quelque chose, assurez-vous de les gérer également
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
 
 // Configure it
 
