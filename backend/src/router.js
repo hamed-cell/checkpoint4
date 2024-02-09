@@ -2,22 +2,20 @@ const express = require("express");
 
 const router = express.Router();
 
-/* ************************************************************************* */
-// Define Your API Routes Here
-/* ************************************************************************* */
-
-// Import itemControllers module for handling item-related operations
+// Importation des modules de contrôleurs pour la gestion des opérations liées aux items et projets
 const itemControllers = require("./controllers/itemControllers");
+const projetsController = require("./controllers/projetsController");
 
-// Route to get a list of items
+// Routes pour les items
 router.get("/items", itemControllers.browse);
-
-// Route to get a specific item by ID
 router.get("/items/:id", itemControllers.read);
-
-// Route to add a new item
 router.post("/items", itemControllers.add);
 
-/* ************************************************************************* */
+// Routes pour les projets
+router.get("/projects", projetsController.browse); // Lister tous les projets
+router.get("/projects/:id", projetsController.read); // Lire un projet spécifique par son ID
+router.post("/projects", projetsController.add); // Ajouter un nouveau projet
+router.put("/projects/:id", projetsController.update); // Mettre à jour un projet existant
+router.delete("/projects/:id", projetsController.delete); // Supprimer un projet
 
 module.exports = router;

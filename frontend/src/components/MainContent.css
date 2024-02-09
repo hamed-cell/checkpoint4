@@ -1,0 +1,41 @@
+.main-content {
+  margin-left: 50vw;
+  padding: 4rem; 
+  width: calc(50vw - 8rem);
+  height: 100vh;
+  color: #8892b0;
+  font-family: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  position: relative;
+  z-index: 5;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #ccd6f6;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100vw;
+    padding: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 0.875rem;
+  }
+}

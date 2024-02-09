@@ -1,0 +1,40 @@
+.projects {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  margin-right: 4rem;
+}
+
+.project-title {
+  color: #ccd6f6;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.project-item {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  padding: 1rem;
+}
+
+.project-details h3 {
+  margin-top: 0;
+}
+
+.project-details p {
+  margin: 0;
+}

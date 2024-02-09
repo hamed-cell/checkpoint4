@@ -1,56 +1,61 @@
+/* Define your color variables at the root level */
+:root {
+  --background-color: #0a192f; /* Replace with the actual color you pick from the image */
+  --text-color: #ffffff;
+  --accent-color: #64ffda; /* This could be for links or buttons, replace with actual accent color */
+  --text-secondary-color: #8892b0; /* A secondary text color for less prominent text */
+}
+
+/* Apply your color variables */
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none; /* Removes underlines from links */
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--text-secondary-color);
+}
+
+/* Add additional global styles here */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header {
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section {
+  padding: 20px;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+#about, #projects, #contact {
+  margin-bottom: 20px;
 }
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Ajoutez plus de styles personnalisés ici */

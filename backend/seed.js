@@ -30,7 +30,20 @@ const seed = async () => {
         ])
       );
     }
-
+    for (let i = 0; i < 5; i += 1) {
+      queries.push(
+        database.query(
+          "INSERT INTO PROJETS (titre, description, image_url, date_debut, date_fin) VALUES (?, ?, ?, ?, ?)",
+          [
+            faker.company.catchPhrase(),
+            faker.lorem.sentence(),
+            faker.image.imageUrl(),
+            faker.date.past().toISOString().split("T")[0], // Format YYYY-MM-DD
+            faker.date.future().toISOString().split("T")[0],
+          ]
+        )
+      );
+    }
     /* ************************************************************************* */
 
     // Wait for all the insertion queries to complete

@@ -1,40 +1,23 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
+import React from "react";
 import "./App.css";
+import Sidebar from "./components/SIdebar"; // Assurez-vous que le nom du fichier est correct
+import MainContent from "./components/Maincontent"; // Vérifiez l'exactitude du chemin et du nom du fichier
+import Experience from "./components/Experience";
+import Project from "./components/Projects";
+import LoginButton from "./components/LoginButton";
+import HaloEffectButton from "./components/HaloEffectButton"; // Importez le nouveau composant
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
-
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="app-container">
+      <Sidebar />
+      <div className="main-content-container">
+        <MainContent />
+        <Experience />
+        <Project />
+        <HaloEffectButton />{" "}
+      </div>
+      <LoginButton />
     </div>
   );
 }

@@ -1,0 +1,51 @@
+.experience {
+  text-align: left; /* Align text to the left for the main content area */
+  padding: 4rem; /* Match padding with the sidebar for consistency */
+  width: calc(50vw - 8rem); /* Calculate the width to fill the right half minus padding */
+  box-sizing: border-box;
+  margin-left: 50vw; /* Push the experience section to the right, next to the sidebar */
+  position: relative; /* Position relative for layering and alignment */
+  overflow-y: auto; /* Enable vertical scrolling if necessary */
+}
+
+/* Nouvelle règle pour ajuster la hauteur en fonction du contenu */
+.experience-content {
+  max-height: calc(100vh - 8rem); /* Définit la hauteur maximale en fonction de la hauteur de la fenêtre moins les marges et le padding */
+  overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+}
+
+.experience-title {
+  color: #ccd6f6; /* Lighter color for the title to stand out */
+  margin-bottom: 2rem;
+  font-size: 2rem; /* Larger font size for the title */
+}
+
+.experience-item {
+  margin-bottom: 2rem; /* Space between experience items */
+  background-color: #112240; /* Background color for contrast */
+  padding: 1rem; /* Padding inside each experience item */
+  border-radius: 10px; /* Rounded corners for aesthetics */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.experience-item h3 {
+  color: #64ffda; /* Bright cyan for headings to stand out */
+  margin-bottom: 1rem;
+}
+
+.experience-item p {
+  color: #8892b0;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 1rem;
+    width: 100vw;
+    margin-left: 0;
+  }
+
+  .experience-title {
+    font-size: 1.5rem;
+  }
+}

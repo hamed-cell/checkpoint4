@@ -1,8 +1,43 @@
 // Load the express module to create a web application
 
 const express = require("express");
+const mysql = require("mysql");
+const cors = require("cors");
 
 const app = express();
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Database connection
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "hamed",
+  password: "naruto",
+  database: "Portfolio",
+});
+
+// Routes
+app.get("/api/users", (req, res) => {
+  db.query("SELECT * FROM Users", (err, result) => {
+    if (err) {
+      res.status(500).send({ error: err.message });
+    } else {
+      res.json(result);
+    }
+  });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 // Configure it
 
